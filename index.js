@@ -22,7 +22,9 @@ module.exports = function (params) {
         //set xml spacing. can be \t for tabs
         spacing: '    ',
         //set default priority
-        priority: '0.5'
+        priority: '0.5',
+        // strip files extensions
+        stripExtensions: false
     });
     //enforce priority to be a string
     config.priority = config.priority.toString();
