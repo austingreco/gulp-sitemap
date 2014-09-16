@@ -88,6 +88,14 @@ Type: `String`
 
 Default: `    ` (4 spaces)
 
+### stripExtensions
+
+Strip the extension of the files being processed. `/some-page.html` becomes `/some-page`
+
+Type: `Boolean`
+
+Default: false
+
 ## Example usage with default options
 
 ```js
@@ -103,7 +111,8 @@ gulp.task('sitemap', function () {
         changeFreq: 'daily',
         priority: '0.5',
         siteUrl: '', // no default - this is a required param
-        spacing: '    '
+        spacing: '    ',
+        stripExtensions: false
         }))
     .pipe(gulp.dest('build/'));
 });
