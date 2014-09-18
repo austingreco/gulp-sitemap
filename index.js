@@ -24,7 +24,13 @@ module.exports = function (params) {
         //set default priority
         priority: '0.5',
         // strip files extensions
-        stripExtensions: false
+        stripExtensions: false,
+        // output optional tags?
+        tags: {
+            lastmod: true,
+            changefreq: true,
+            priority: true
+        }
     });
     //enforce priority to be a string
     config.priority = config.priority.toString();
